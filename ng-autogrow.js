@@ -35,7 +35,7 @@ angular
       restrict: 'A',
 
       link: function (scope, angularElement, attributes) {
-        const minHeight = parseInt(attributes.autogrowMinHeight, 10);
+        const minHeight = parseInt(attributes.autogrowMinHeight || 0, 10);
 
         // When it loads
         angularElement.ready(() => {

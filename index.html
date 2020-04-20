@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ng-autogrow demo</title>
+  <script type="text/javascript" src="//use.typekit.net/fcj5mrj.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link rel="stylesheet" type="text/css" href="https://gistcdn.githack.com/tinacious/d89f3daf0e4555a2dc23fd3beb14e179/raw/5bd576497143efb5c1374cc3a02fa7e9191bc678/plugin-styles.css">
+  <style>
+    /* demo theme styles */
+    .container {
+      max-width: 600px;
+    }
+    .site-header .logo {
+      width: 100%;
+    }
+    .logo span, .logo img {
+      display: block;
+      float: left;
+    }
+    .logo span {
+      padding: 10px 0 0 10px;
+    }
+    .site-header {
+      padding: 5px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px 0;
+    }
+    .btn:hover {
+      text-decoration: none;
+    }
+    code {
+      background: #e8e8e8;
+      font-family: 'consolas', monospace;
+      padding: 3px 5px;
+      white-space: nowrap;
+    }
+    @media (max-width: 767px) {
+      .site-header .logo span {
+        display: block;
+      }
+    }
+
+    /* demo styles */
+    input, textarea {
+      margin: 20px 0 10px;
+      border: 2px solid #e8e8e8;
+      padding: 5px 8px;
+      border-radius: 3px;
+    }
+    textarea {
+      width: 100%;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #bbbbbb;
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <img src="http://tinaciousdesign.com/images/td-logo.png" alt="Tinacious Design logo" width="50">
+      <span><b><a href="http://tinaciousdesign.com/">Tinacious Design</a></b> &ndash; plugin demos</span>
+    </div>
+  </div>
+</header>
+
+<section id="ng-app" ng-app="demo" class="site-content">
+  <div class="container" ng-controller="MainCtrl">
+    <h1>ng-autogrow</h1>
+    <p>
+      An AngularJS directive for autogrowing textareas.
+    </p>
+
+    <p>
+      It automagically adjusts the height of textareas so you don't have to vertically scroll.
+    </p>
+
+    <h2>Default</h2>
+    <p>
+      Implemented simply as <code>&lt;textarea autogrow&gt;&lt;/textarea&gt;</code>
+    </p>
+    <textarea autogrow></textarea>
+
+    <h2>With a minimum height set</h2>
+    <p>
+      You can set a minimum height using the attribute <code>autogrow-min-height="100"</code>
+    </p>
+    <textarea
+      placeholder="Type a lot of things here 🙃"
+      autogrow
+      autogrow-min-height="100"></textarea>
+    <p>
+      <a href="http://github.com/tinacious/ng-autogrow" class="btn">View on Github</a>
+    </p>
+  </div>
+
+</section>
+<script src="node_modules/angular/angular.js"></script>
+<script src="ng-autogrow.js"></script>
+
+<script>
+  angular.module('demo', ['ng-autogrow'])
+  .controller('MainCtrl', function () {});
+</script>
+</body>
+</html>
