@@ -4,6 +4,7 @@ An AngularJS directive for autogrowing textareas.
 
 It automagically adjusts the height of textareas so you don't have to vertically scroll.
 
+👯 [View the demo here](https://tinacious.github.io/ng-autogrow)
 
 ## Usage
 
