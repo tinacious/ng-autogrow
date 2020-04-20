@@ -8,6 +8,10 @@ It automagically adjusts the height of textareas so you don't have to vertically
 
 ## Usage
 
+```
+npm install ng-autogrow
+```
+
 Add it as a dependency to your module.
 
 ```js
