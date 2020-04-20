@@ -1,10 +1,9 @@
 {
   "name": "ng-autogrow",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An AngularJS directive for autogrowing textareas",
-  "main": "index.js",
-  "scripts": {
-  },
+  "main": "ng-autogrow.js",
+  "scripts": {},
   "keywords": [
     "angularjs",
     "angular",
